@@ -27,7 +27,7 @@ async def main():
 
         await browser.close()
 
-        # ✅ VERY IMPORTANT FORMAT
-        print(f"SUM={int(total_sum)}")
+        # ✅ ONLY NUMBER PRINT
+        print(int(total_sum))
 
 asyncio.run(main())
