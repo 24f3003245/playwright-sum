@@ -1,0 +1,31 @@
+name: Playwright Sum Tables
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  run:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install
+
+      - name: Step with email 24f3003245@ds.study.iitm.ac.in
+        run: echo "Running Playwright script"
+
+      - name: Run script
+        run: python sum_tables.py
