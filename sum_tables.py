@@ -12,7 +12,7 @@ async def main():
 
         for seed in range(53, 63):
 
-            url = f"https://sanand0.github.io/tdsdata/playwright/seed/{seed}.html"
+            url = f"https://sanand0.github.io/tdsdata/js_table/?seed={seed}"
 
             await page.goto(url)
 
