@@ -10,7 +10,6 @@ async def main():
     async with async_playwright() as p:
 
         browser = await p.chromium.launch()
-
         page = await browser.new_page()
 
         for seed in seeds:
@@ -26,8 +25,9 @@ async def main():
 
             total_sum += sum(numbers)
 
-        print("FINAL TOTAL:", total_sum)
-
         await browser.close()
+
+        # ✅ VERY IMPORTANT FORMAT
+        print(f"SUM={int(total_sum)}")
 
 asyncio.run(main())
